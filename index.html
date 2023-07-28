@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Countries API</title>
+</head>
+<body class="lightmode">
+    <header>
+        <div>
+            <h1>Where in the world?</h1>
+            <button>
+                <i class="bi bi-moon"></i>
+                Dark Mode
+            </button>
+        </div>
+    </header>
+    <aside>
+        <img src="./loading.gif" alt="">
+    </aside>
+    <main>
+        <div class="top">
+            <input type="search" placeholder="Search for a country..." class="searchBar" oninput="searchCountries()">
+            <select name="region" id="region" onchange="searchRegion()">
+                <option value="" selected>All</option>
+                <option value="africa">Africa</option>
+                <option value="america">America</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="oceania">Oceania</option>
+            </select>
+        </div>
+        <section class="countries"></section>
+    </main>
+    <template id="sampleBtn">
+        <button class="border"></button>
+    </template>
+    <template id="sample">
+        <article class="card">
+            <img class="flag" src="" alt="">
+            <div class="card-body">
+                <h3 class="name"></h3>
+                <p>Population: <span class="population"></span></p>
+                <p>Region: <span class="region"></span></p>
+                <p>Capital: <span class="capital"></span></p>
+            </div>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
